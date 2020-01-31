@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: 加法还没学
@@ -11,6 +12,9 @@
     <title>Title</title>
 </head>
 <body>
-<h2>查询所有的账户</h2>
+    <h2>查询所有的账户</h2>
+    <c:forEach items="${list}" var="test_Account">
+        ${test_Account.name}
+    </c:forEach>
 </body>
 </html>

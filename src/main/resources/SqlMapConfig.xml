@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/ssm"/>
+                <property name="username" value="root"/>
+                <property name="password" value="qy991009"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 使用的是注解 -->
+    <mappers>
+        <!-- <mapper class="com.hc.dao.IAccountdao"/> --> <!-- 该包下所有的dao接口都可以使用 -->
+        <package name="com.hc.dao"/>
+    </mappers>
+</configuration>
